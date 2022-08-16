@@ -22,7 +22,7 @@ function LoginPage() {
 
   return (
     <>
-      {error && <Alert variant={"danger"}>Hata {console.log({ error })}</Alert>}
+      {error && <Alert variant={"danger"}>{JSON.parse(error.message).message} {console.log({error})}</Alert>}
       <Form
         onSubmit={(e) => {
           e.preventDefault();
